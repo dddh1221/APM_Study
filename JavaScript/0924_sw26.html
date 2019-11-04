@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var num=0;
+            function testFnc() {
+                num++;
+                document.write(num, "<br/>");
+                if(num==10) return;
+                testFnc();
+            }
+
+            testFnc();
+        </script>
+    </head>
+</html>

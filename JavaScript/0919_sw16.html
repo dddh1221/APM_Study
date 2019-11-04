@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var plusTen = function() {
+                var num = prompt("숫자를 입력해 주세요", "");
+                alert(Number(num) + 10);
+            };
+
+            alert(typeof(plusTen));
+            alert(plusTen);
+            plusTen();
+
+            var add = plusTen;
+            add();
+        </script>
+    </head>
+</html>

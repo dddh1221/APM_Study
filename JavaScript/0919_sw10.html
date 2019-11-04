@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <script type="text/javascript">
+        
+            window.onload = function() {
+                document.getElementsByTagName("h1")[0].style.color = "#f00";
+
+                var myList = document.getElementsById("food1").getElementsByTagName("li").item(1);
+                myList.style.backgroundColor = "red";
+
+                document.getElementById("kimchi").firstChild.style.color = "#0f0";
+
+                if(document.getElementsByTagName("p").length > 0) {
+                    var p = document.getElementsByTagName("p")[1];
+                    p.nextSibling.style.backgroundColor = "yellow";
+                }
+            }
+        
+        </script>
+    </head>
+
+    <body>
+        <h1>선호하는 음식</h1>
+        <div id="food1">
+            <h2>한식</h2>
+            <ol>
+                <li>김치</li>
+                <div id="kimchi">
+                    <p>김치찌개</p>
+                    <p>김치만두</p>
+                    <p>김치볶음밥</p>
+                </div>
+                <li>불고기</li>
+                <li>비빔밥</li>
+            </ol>
+        </div>
+    </body>
+</html>

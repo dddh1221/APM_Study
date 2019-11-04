@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>0917_SW3</title>
+
+        <script type="text/javascript">
+
+            var date = new Date();
+            var y = date.getFullYear();
+            var m = date.getMonth();
+            var d = date.getDate();
+
+            var theDate = new Date(y, m, 1);
+            var theDay = theDate.getDay();
+
+            var last = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            if(y % 4 == 0 && y % 100 != 0 && y % 400 == 0) lastDate = last[1] = 29;
+            var lastDate = last[m];
+            var row = Math.ceil((theDay + lastDate) / 7);
+
+            document.write("<h1>" + y + "." + (m + 1) + "</h1>");
+
+            var calendar = "<table border='1'>";
+            calendar += "<tr>";
+            calendar += "<td>일</td>";
+            calendar += "<td>월</td>";
+            calendar += "<td>화</td>";
+            calendar += "<td>수</td>";
+            calendar += "<td>목</td>";
+            calendar += "<td>금</td>";
+            calendar += "<td>토</td>";
+            calendar += "</tr>";
+
+            var dNum = 1;
+
+            for(var i = 0 ; i < row ; i++) {
+                calendar += "<tr>";
+                for(var j = 0 ; j < 7 ; j++) {
+                    if(row == 0 && j < theDay || dNum > lastDate) {
+                        calendar += "<td> &nbsp; </td>";
+                    }
+                    else {
+                        calendar += "<td>" + dNum + "</td>";
+                        dNum++;
+                    }
+                }
+                calendar += "</tr>";
+            }
+
+            calendar += "</table>";
+            document.write(calendar);
+        
+        </script>
+    </head>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $("h1").attr("align", "left");
+                $(".first").css("background-color", "orange").css("color", "red");
+                $(".second").css("background-color", "yellow");
+                $(".tit").css("background-color", "white");
+                $(".myList").css("border", "2px dashed blue");
+
+                $("#one").replaceWith("<li>김경빈</li>");
+                $("#two").replaceWith("<li>김다훈</li>").css("color", "blue");
+                $(".three").replaceWith("<li>김민정</li>");
+                $(".three").after("<li>김상철</li>").css("color", "purple");
+            })
+        </script>
+    </head>
+
+    <style type="text/css">
+        div { background-color: yellow; }
+        .tit { background-color: orange; }
+    </style>
+
+    <body>
+        <h1 align="center"><strong>정보통신기기과</strong></h1>
+        <h2 class="first"><strong>1학년</strong></h2>
+        <h2 class="second">2학년</h2>
+        <h2 class="tit">3학년</h2>
+        
+        <ul class="myList">
+            <li id="one">황현재</li>
+            <li id="two">김민정</li>
+            <li class="three">김형균</li>
+            <li>류호욱</li>
+        </ul>
+    </body>
+</html>

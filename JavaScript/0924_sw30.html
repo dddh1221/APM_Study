@@ -1,0 +1,73 @@
+<html>
+    <style>
+        * { margin: 0; padding: 0; }
+        li { list-style: none; }
+
+        #gallery { width: 350px; margin: 30px auto; border: 1px solid #999; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); }
+        #gallery h1 { text-align: center; }
+        #gallery img { border: 1px solid #666; }
+        #photo { text-align: center; }
+        #gallery ul { width: 800px; margin: 0 auto; overflow: hidden; }
+        #photo_list ul li { width: 100px; float: left; text-align: center; }
+        #photo_list { width: 300px; margin: 10px auto; overflow: hidden; }
+        .btn_wrap { text-align: center; }
+        .btn_wrap a { font-weight: bold; }
+    </style>
+
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function() {
+                var list_zone = document.getElementById("inner_list");
+                var list_a = list_zone.getElementsByTagName("a");
+
+                for(var i = 0; i < 8 ; i++){
+                    list_a.item(i).onclick = function() {
+                        var ph = document.getElementById("photo").children[0];
+                        ph.src = this.href;
+                        return false;
+                    }
+                }
+
+                var n_btn = document.getElementById("next_btn");
+                var m_num = 0;
+                n_btn.onclick = function() {
+                    if(m_num >= list_a.length - 3) return false;
+                    m_num++;
+                    list_zone.style.marginLeft = -100 * m_num + "px";
+                }
+
+                var b_btn = document.getElementById("before_btn");
+                b_btn.onclick = function() {
+                    if(m_num <= 0) return false;
+                    m_num--;
+                    list_zone.style.marginLeft = -100 * m_num + "px";
+                }
+            };
+        </script>
+    </head>
+
+    <body>
+        <div id="gallery">
+            <h1>인마고 갤러리</h1>
+            <p id="photo"> <img src="1.jpg" width="320" height="320"/> </p>
+
+            <div id="photo_list">
+                <ul id="inner_list">
+                    <li><a href="1.jpg"><img src="1.jpg" width="50" height="50"/></a></li>
+                    <li><a href="2.jpg"><img src="2.jpg" width="50" height="50"/></a></li>
+                    <li><a href="3.jpg"><img src="3.jpg" width="50" height="50"/></a></li>
+                    <li><a href="4.jpg"><img src="4.jpg" width="50" height="50"/></a></li>
+                    <li><a href="5.jpg"><img src="5.jpg" width="50" height="50"/></a></li>
+                    <li><a href="6.jpg"><img src="6.jpg" width="50" height="50"/></a></li>
+                    <li><a href="7.jpg"><img src="7.jpg" width="50" height="50"/></a></li>
+                    <li><a href="8.jpg"><img src="8.jpg" width="50" height="50"/></a></li>
+                </ul>
+            </div>
+            <p class="btn_wrap">
+                <button id="before_btn">&nbsp;&lt;&nbsp;</button>
+                <button id="next_btn">&nbsp;&gt;&nbsp;</button>
+            </p>
+        </div>
+    </body>
+</html>

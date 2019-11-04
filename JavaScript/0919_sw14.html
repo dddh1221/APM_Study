@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById("wrap").children[0].style.color = "red";
+                var p = document.getElementsByTagName("p")[1];
+                var nextObj = p.nextSibling;
+
+                var test = nextObj.nodeType;
+                alert(test);
+
+                while(nextObj.nodeType != 1) {
+                    nextObj = nextObj.nextSibling;
+                }
+
+                nextObj.style.backgroundColor = "yellow";
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <p>내용1</p>
+            <p>내용2</p>
+            <p>내용3</p>
+            <p>내용4</p>
+        </div>
+    </body>
+</html>

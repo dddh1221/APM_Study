@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $("body").css("border", "1px  solid blue");
+                $("div").css("border", "1px solid blue");
+                $("#grade3 h2").css("color", "blue");
+                $("#grade3 ul").css("border", "1px solid black");
+                $("#grade2 ul").css("border", "1px solid black");
+                $("#grade3 ul").children().css("color", "green");
+                $("#grade3 ul li").first().css("background-color", "yellow");
+                $("#intro p").css("font-family", "바탕").css("line-height", "200%").css("margin-left", "30px");
+                $("#intro p>b").css("color", "red");
+            })
+        </script>
+    </head>
+    <body>
+        <h1>정보통신기기과</h1>
+
+        <div id="grade3">
+            <h2>3학년 과목</h2>
+            <ul>
+                <li>정보통신기기소프트웨어개발</li>
+                <li>네트워크구축</li>
+                <li>마이크로프로세서제어</li>
+                <li>정보통신기기</li>
+            </ul>
+        </div>
+
+        <div id="grade2">
+            <h2>2학년 과목</h2>
+            <ul>
+                <li>정보통신</li>
+                <li>마이크로프로세서기초</li>
+                <li>정보통신기기설계</li>
+            </ul>
+        </div>
+        
+        <div id="intro">
+            <h2>학과 소개</h2>
+            <p>정보통신 산업 기술의 기반이 되는 통신에 대한 기초 지식을 바탕으로 하드웨어 기술을 익히고,</br>
+            하드웨어 시스템을 제어하는 소프트웨어 응용기술을 습득하여 정보통신기기의 회로설계를</br>
+            수행할 수 있는 <b>유/무선 통신 융합 IT 영마이스터(YOUT MIESTER)육성</b></p>
+        </div>
+    </body>
+</html>

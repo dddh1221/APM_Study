@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <script type="text/javascript">
+            window.onload = function() {
+                var a = document.getElementById("m").nodeType;
+                alert(a);
+                var b = document.getElementById("m").firstChild.nodeType;
+                alert(b);
+                var c = document.getElementById("m").getAttributeNode("href").nodeType;
+                alert(c);
+            }
+        </script>
+    </head>
+
+    <body>
+        <a href="https://www.naver.com" id="m">naver</a>
+    </body>
+</html>

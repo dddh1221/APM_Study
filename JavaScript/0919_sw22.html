@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            function add() {
+                var output = "";
+                alert(typeof(arguments));
+                alert(arguments.length);
+                for(var i = 0 ; i < arguments.length ; i++ ) {
+                    output += arguments[i] + " ";
+                }
+                return output;
+            }
+
+            var out = add(1, 2, 3, 4, 5);
+            alert(out);
+        </script>
+    </head>
+
+</html>
